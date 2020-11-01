@@ -7,6 +7,7 @@ This terraform configuration contains everything you need to configure and deplo
 The main motivation behind the selection of services is to use as many serverless components as possible.
 
 - ECS Fargate 
+- Application Load Balancer
 - Aurora Serverless
 - EFS (Elastic File System) 
 - CloudFront as CDN
@@ -30,4 +31,4 @@ $: source ~/.bashrc
 
 Please, make a copy of `.envrc.example` file and change paceholders in a new `.envrc` file with your credentials and desired DB username/password 
 
-p.s. Run out of time, didn't have time to make a good description of the infrastructure.
+p.s. Run out of time, didn't have time to prepare a good description of the infrastructure :(
