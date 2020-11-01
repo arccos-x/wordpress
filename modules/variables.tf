@@ -135,3 +135,4 @@ variable "min_task" {
   description = "Minimum number of tasks should the service always maintain"
   default     = "1"
 }
+

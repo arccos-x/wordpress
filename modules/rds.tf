@@ -68,3 +68,4 @@ resource "aws_ssm_parameter" "db_master_password" {
   value = var.db_master_password
   tags  = var.tags
 }
+

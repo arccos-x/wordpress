@@ -18,3 +18,4 @@ variable "site_domain" {
 variable "db_master_username" {}
 
 variable "db_master_password" {}
+

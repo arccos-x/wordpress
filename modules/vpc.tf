@@ -15,3 +15,4 @@ module "vpc" {
   tags                   = var.tags
   enable_dns_hostnames   = true
 }
+
