@@ -1,0 +1,6 @@
+workflows:
+  myworkflow:
+    apply:
+      steps:
+      - apply
+      - run: ./terratest-wordpress-infra.go

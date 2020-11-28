@@ -15,7 +15,10 @@ variable "site_domain" {
   description = "The primary domain name of the website"
 }
 
+variable "atlantis_github_user" {}
+
+variable "atlantis_github_token" {}
+
 variable "db_master_username" {}
 
 variable "db_master_password" {}
-

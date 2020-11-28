@@ -20,3 +20,20 @@ module "ha-wordpress" {
     db_master_password       = var.db_master_password
 }
 
+module "atlantis" {
+  source  = "terraform-aws-modules/atlantis/aws"
+  version = "~> 2.0"
+
+  name = "atlantis"
+
+  vpc_id          = module.ha-wordpress.vpc_id
+  private_subnets = ["10.0.0.0/24", "10.0.1.0/24", "10.0.2.0/24"]
+  public_subnets  = ["10.0.100.0/24", "10.0.101.0/24", "10.0.102.0/24"]
+
+  route53_zone_name = var.site_domain
+
+  # Atlantis
+  atlantis_github_user       = var.atlantis_github_user
+  atlantis_github_user_token = var.atlantis_github_token
+  atlantis_repo_whitelist    = ["github.com/arccos-x/wordpress"]
+}

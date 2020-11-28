@@ -31,4 +31,17 @@ $: source ~/.bashrc
 
 Please, make a copy of `.envrc.example` file and change paceholders in a new `.envrc` file with your credentials and desired DB username/password 
 
-p.s. Run out of time, didn't have time to prepare a good description of the infrastructure :(
+# Infrastructure tests
+
+## Tools that used for testing of the current infrastructure: 
+- [Atlantis](https://www.runatlantis.io/)
+- [Terratest](https://terratest.gruntwork.io/)
+
+## The main idea of these tools
+
+Atlantis is an application for automating Terraform via pull requests. It is deployed as a standalone application into the current infrastructure on ECS Fargate and (I hope) has an integration with GitHub. No third-party has access to your credentials.
+It configured to use a custom workflow (`atlantis.yml` file), which triggers terratest.
+
+Terratest file (`tests/` folder) will apply current infrastructure and will check whether our Wordpress site turn HTTP 200 or not.
+
+And I still cannot manage my time to properly finish this task, but I hope that the main idea is clear

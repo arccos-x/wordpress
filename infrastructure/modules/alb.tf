@@ -7,8 +7,8 @@ module "acm_alb" {
 }
 
 resource "aws_security_group" "alb" {
-  name        = "${var.prefix}-alb-${var.environment}"
-  description = "Allow HTTPS inbound traffc"
+  name        = "${var.prefix}-alb-${var.environment}-q"
+  description = "Allow HTTP inbound traffc"
   vpc_id      = module.vpc.vpc_id
 
   egress {
@@ -60,4 +60,3 @@ module "alb" {
   ]
   tags = var.tags
 }
-

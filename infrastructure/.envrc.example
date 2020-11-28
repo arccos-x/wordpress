@@ -7,4 +7,5 @@ export TF_VAR_aws_default_region="XXX"
 export TF_VAR_db_master_password="XXX"
 export TF_VAR_db_master_username="XXX"
 export TF_VAR_site_domain="XXX"
-
+export TF_VAR_atlantis_github_user="XXX"
+export TF_VAR_atlantis_github_token="XXX"
